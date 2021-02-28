@@ -4,6 +4,17 @@
     "public": "/public"
   },
   "plugins": [
-    "@snowpack/plugin-postcss"
+    "@snowpack/plugin-postcss",
+    ["snowpack-plugin-terser",
+      {
+        "terserOptions": {
+          "compress": {
+            "arguments": true,
+            "passes": 2,
+            "unsafe_arrows": true
+          }
+        }
+      }
+    ]
   ]
 }
