@@ -1,0 +1,6 @@
+body {
+  display: flex;
+  transition: all 0.5s;
+  user-select: none;
+  background: linear-gradient(to bottom, red, black);
+}
