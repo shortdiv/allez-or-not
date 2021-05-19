@@ -1,10 +1,18 @@
 {
   "mount": {
-    "src": "/",
-    "public": "/public"
+    "src/_site": { "url": "/", "static": true, "resolve": false },
+    "src/styles": { "url": "/styles" },
+    "src/js": {"url": "/js"}
   },
   "plugins": [
     "@snowpack/plugin-postcss",
+    [
+      "@snowpack/plugin-run-script",
+      {
+        "cmd": "eleventy",
+        "watch": "$1 --watch"
+      }
+    ],
     ["snowpack-plugin-terser",
       {
         "terserOptions": {
