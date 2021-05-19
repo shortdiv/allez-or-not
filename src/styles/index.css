@@ -2,5 +2,46 @@ body {
   display: flex;
   transition: all 0.5s;
   user-select: none;
-  color: green;
+}
+
+ul > li {
+  list-style: none;
+  text-decoration: none;
+}
+
+ul li {
+  display: table;
+  width: 100%;
+
+  list-style-type: none;
+  line-height: 2.5em;
+  margin: 0;
+  padding: 0.5em 2em;
+}
+
+.tags {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+
+  @media (max-width: 700px) {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.tag {
+  display: inline-block;
+  background: #2c3e50;
+  color: white;
+  padding: 0 1em;
+  margin: 2px 1px;
+  line-height: inherit;
+}
+
+.gym-list--item {
+  line-height: 1.5em;
+  margin: 0 0 0.6em 0;
+  display: table-cell;
+  vertical-align: middle;
 }
