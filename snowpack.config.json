@@ -5,6 +5,7 @@
     "src/js": {"url": "/js"}
   },
   "plugins": [
+    "@snowpack/plugin-dotenv",
     "@snowpack/plugin-postcss",
     [
       "@snowpack/plugin-run-script",
